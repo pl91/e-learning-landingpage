@@ -1,0 +1,66 @@
+//GLOBAL 
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  line-height: 2.8rem;
+}
+
+// HEADING
+.heading-xl {
+  font-weight: 800;
+  font-size: 5.6rem;
+  line-height: 7rem;
+}
+
+.heading-l {
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+.heading-m {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+.heading-sm {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+// BODY
+.body-m {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.body-sm {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+// BUTTONS
+.btn {
+    &,
+    &:link,
+    &:visited {
+      text-transform: capitalize;
+      text-decoration: none;
+      padding: 1.4rem 3.2rem;
+      display: inline-block;
+      border-radius: 2.8rem;
+      /* transition must be declared on the initial state of an element 
+      and handles all transformations on the element as well as pseudo-elements */
+      transition: all 0.2s;
+      position: relative;
+      font-size: 1.8rem;
+
+      // Change for the <button> element
+      border: none;
+      cursor: pointer;
+    }
+}
+
+

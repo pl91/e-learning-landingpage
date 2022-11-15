@@ -1,0 +1,33 @@
+// GLOBAL VARIABLES
+:root {
+    --color-blue-1: #666CA3;
+    --color-blue-2: #13183F;
+
+    --color-pink-1: #FFA7C3;
+    --color-pink-2: #F74780;
+
+    --color-grey: #83869A;
+    --color-white: #FFF;
+}
+
+// MIXINS
+@mixin gradient-primary {
+    background-image: linear-gradient(180deg, rgba(255, 111, 72, 1),rgba(240, 42, 166, 1));
+}
+
+@mixin gradient-secondary {
+    background-image: linear-gradient(180deg, rgba(77,81,255,1), rgba(240, 42, 166, 1));   
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+     
+// RESPONSIVE BREAKPOINTS
+$bp-xl: 75em; //   1200px / 16 = 75em
+$bp-l: 62.5em; //   1000px / 16 = 62.5em
+$bp-m: 50em; //   800px / 16 = 50em
+$bp-s: 37.5em; //   600px / 16 = 37.5em
