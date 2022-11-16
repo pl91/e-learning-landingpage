@@ -1,6 +1,53 @@
 .courses {
-    grid-row: 2 / 3;
-    grid-column: middle-start / middle-end;
+  grid-row: 2 / 3;
+  grid-column: middle-start / middle-end;
 
-    background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 5.6rem;
+
+  margin-top: 25rem;
+  margin-bottom: 14rem;
+
+  &__icon {
+    width: 5.6rem;
+    height: 5.6rem;
+    margin-top: -3.5rem;
+  }
+
+  &__heading {
+    @include gradient-primary;
+    border-radius: 1.5rem;
+    padding: 6.4rem 3.2rem 13.8rem 3.2rem;
+    color: var(--color-white);
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    justify-content: space-around;
+    gap: 2.4rem;
+    padding: 0 3.2rem 4rem 3.2rem;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  }
+
+  &__cta {
+    &,
+    &:link,
+    &:visited {
+      text-transform: capitalize;
+      text-decoration: none;
+      transition: all 0.2s;  
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 2.8rem;
+      letter-spacing: 0.5px;
+      color: var(--color-pink-2);
+      cursor: pointer;
+    //   padding-top: 2.4rem;
+    }
+  }
 }

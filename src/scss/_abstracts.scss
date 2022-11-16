@@ -25,6 +25,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+// UTILITY CLASS 
+.pd-sm {margin-top: 1rem;}
+.pd-md {margin-top: 2rem;}
+.pd-lg {margin-top: 3rem;}
+
+.pu-sm {margin-bottom: 1rem;}
+.pu-md {margin-bottom: 2rem;}
+.pu-lg {margin-bottom: 3rem;}
      
 // RESPONSIVE BREAKPOINTS
 $bp-xl: 75em; //   1200px / 16 = 75em

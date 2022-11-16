@@ -10,6 +10,7 @@ body {
   font-weight: 800;
   font-size: 5.6rem;
   line-height: 7rem;
+  color: var(--color-blue-2);
 }
 
 .heading-l {
@@ -32,8 +33,8 @@ body {
 
 // BODY
 .body-m {
-  font-weight: 500;
   font-size: 1.8rem;
+  color: var(--color-grey);
 }
 
 .body-sm {
@@ -51,16 +52,30 @@ body {
       padding: 1.4rem 3.2rem;
       display: inline-block;
       border-radius: 2.8rem;
-      /* transition must be declared on the initial state of an element 
-      and handles all transformations on the element as well as pseudo-elements */
       transition: all 0.2s;
       position: relative;
+      font-family: inherit;
       font-size: 1.8rem;
-
-      // Change for the <button> element
+      font-weight: 700;
+      line-height: 2.8rem;
+      letter-spacing: .5px;  
+      color: var(--color-white);
       border: none;
       cursor: pointer;
     }
-}
 
+    &--1 {
+      background-color: var(--color-blue-2);
+    }
+
+    &--2 {
+      @include gradient-primary;
+      padding: 1.9rem 3.2rem;
+      border-radius: 3.15rem;
+    }
+
+    &--3 {
+      @include gradient-secondary;
+    }
+}
 
