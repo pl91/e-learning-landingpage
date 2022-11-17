@@ -6,7 +6,7 @@
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "dev": "parcel --open firefox",
+    "dev": "parcel --open chrome",
     "build": "parcel build"
   },
   "author": "Paul Liani",

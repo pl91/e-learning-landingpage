@@ -18,6 +18,6 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 80vh repeat(2, min-content);
+    grid-template-rows: 90vh repeat(2, min-content);
     grid-template-columns: [full-start] 1fr [middle-start] repeat(6, 1fr) [middle-end] 1fr [full-end];
 }
