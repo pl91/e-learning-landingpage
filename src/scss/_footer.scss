@@ -10,9 +10,19 @@
   grid-template-rows: 12rem;
   align-items: center;
   justify-items: start;
+
+  @media only screen and (max-width: $bp-xs) {
+    margin-top: -2rem;
+}
+
+  @media only screen and (max-width: $bp-xxs) {
+    grid-row: 4 / 5;
+}
+
+@media only screen and (max-width: $bp-xxxs) {
+  margin-top: -4rem;
+}
   
-
-
   &__logo {
     grid-column: 2 / 3;
     cursor: pointer;
