@@ -24,21 +24,26 @@
     <!-- header start -->
     <header class="header">
       <img src="./assets/logo-dark.svg" alt="logo" class="header__logo" />
-      <button class="btn btn--1">Get Started</button>
+      <button class="btn btn--1"><a href="#">Get Started</a></button>
       <div class="header__heading">
         <h1 class="heading-xl">Maximize skill, minimize budget</h1>
         <p class="body-m">
           Our modern courses across a range of in-demand skills will give you
           the knowledge you need to live the life you want.
         </p>
-        <button class="btn btn--2 pd-sm">Get Started</button>
+        <button class="btn btn--2 mb-sm"><a href="#">Get Started</a></button>
       </div>
       <div class="header__image-box">
-        <img
+        <picture class="header__image">
+          <source srcset="./assets/image-hero-desktop.webp" media="(min-width: 1200px)" />
+          <source srcset="./assets/image-hero-tablet.webp" media="(min-width: 800px)" />
+          <img src="./assets/image-hero-mobile.webp" />
+        </picture>
+        <!-- <img
           src="./assets/image-hero-desktop@2x.webp"
           alt="hero image"
           class="header__image"
-        />
+        /> -->
       </div>
     </header>
     <!-- header end -->
@@ -52,40 +57,37 @@
       <!-- course 1 -->
       <div class="courses__description">
         <img src="./assets/icon-animation.svg" alt="course icon" class="courses__icon">
-        <h3 class="heading-sm">Animation</h3>
+        <h3 class="heading-sm mt-sm">Animation</h3>
         <p class="body-m">Learn the latest animation techniques to create stunning motion 
-          design and captivate your audience.
-          Get Started</p>
+          design and captivate your audience.</p>
         <a href="#" class="courses__cta">Get Started</a>
       </div>
       <!-- course 2 -->
       <div class="courses__description">
         <img src="./assets/icon-design.svg" alt="course icon" class="courses__icon">
-        <h3 class="heading-sm">Design</h3>
+        <h3 class="heading-sm mt-sm">Design</h3>
         <p class="body-m">Create beautiful, usable interfaces to help shape the future of how the web looks.</p>
         <a href="#" class="courses__cta">Get Started</a>
       </div>
       <!-- course 3 -->
       <div class="courses__description">
         <img src="./assets/icon-photography.svg" alt="course icon" class="courses__icon">
-        <h3 class="heading-sm">Photography</h3>
+        <h3 class="heading-sm mt-sm">Photography</h3>
         <p class="body-m">Explore critical fundamentals like lighting, composition, and focus to capture exceptional photos.</p>
         <a href="#" class="courses__cta">Get Started</a>
       </div>
       <!-- course 4 -->
       <div class="courses__description">
         <img src="./assets/icon-crypto.svg" alt="course icon" class="courses__icon">
-        <h3 class="heading-sm">Crypto</h3>
-        <p class="body-m">All you need to know to get started investing in crypto. Go from beginner to advanced with this 54 hour course.
-          Get Started</p>
+        <h3 class="heading-sm mt-sm">Crypto</h3>
+        <p class="body-m">All you need to know to get started investing in crypto. Go from beginner to advanced with this 54 hour course.</p>
         <a href="#" class="courses__cta">Get Started</a>
       </div>
       <!-- course 5 -->
       <div class="courses__description">
         <img src="./assets/icon-business.svg" alt="course icon" class="courses__icon">
-        <h3 class="heading-sm">Business</h3>
-        <p class="body-m">A step-by-step playbook to help you start, scale, and sustain your business without outside investment.
-          Get Started</p>
+        <h3 class="heading-sm mt-sm">Business</h3>
+        <p class="body-m">A step-by-step playbook to help you start, scale, and sustain your business without outside investment.</p>
         <a href="#" class="courses__cta">Get Started</a>
       </div>
     </section>
@@ -93,37 +95,11 @@
 
     <!-- footer start -->
     <footer class="footer">
-      <div class="footer__content">
-        <img src="./assets/logo-light.svg" alt="logo" class="footer__logo" />
-        <button class="footer__btn">Get started</button>
-      </div>
+        <a href="#" class="footer__logo">
+        <img src="./assets/logo-light.svg" alt="logo"/>
+      </a>
+        <button class="footer__btn btn btn--3"><a href="#">Get started</a></button>
     </footer>
     <!-- foother end -->
-
-    <!-- Get Started
-
-
-
-  Design
-  Create beautiful, usable interfaces to help shape the future of 
-  how the web looks.
-  Get Started
-
-  Photography
-  Explore critical fundamentals like lighting, composition, and focus 
-  to capture exceptional photos.
-  Get Started
-
-  Crypto
-  All you need to know to get started investing in crypto. Go from beginner 
-  to advanced with this 54 hour course.
-  Get Started
-
-  Business
-  A step-by-step playbook to help you start, scale, and sustain your business 
-  without outside investment.
-  Get Started
-
-  Get Started -->
   </body>
 </html>

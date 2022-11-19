@@ -5,6 +5,11 @@ body {
   line-height: 2.8rem;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
 // HEADING
 .heading-xl {
   font-weight: 800;
@@ -47,10 +52,10 @@ body {
     &,
     &:link,
     &:visited {
+      display: inline-block;
       text-transform: capitalize;
       text-decoration: none;
       padding: 1.4rem 3.2rem;
-      display: inline-block;
       border-radius: 2.8rem;
       transition: all 0.2s;
       position: relative;
@@ -59,23 +64,51 @@ body {
       font-weight: 700;
       line-height: 2.8rem;
       letter-spacing: .5px;  
-      color: var(--color-white);
+      color: var(--color-white); 
       border: none;
       cursor: pointer;
     }
 
     &--1 {
       background-color: var(--color-blue-2);
+      z-index: 20;
+
+      &:hover {
+        background-color: var(--color-blue-1);
+      }
     }
 
     &--2 {
       @include gradient-primary;
       padding: 1.9rem 3.2rem;
       border-radius: 3.15rem;
+
+      &:hover {
+        opacity: .5;
+      }
     }
 
     &--3 {
       @include gradient-secondary;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        @include gradient-secondary-hover;
+        height: 100%;
+        width: 100%;
+        border-radius: 2.8rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: opacity 0.2s linear;
+        opacity: 0;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
     }
 }
 
