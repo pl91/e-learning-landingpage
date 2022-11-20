@@ -2,12 +2,11 @@
   "name": "e-learning-landingpage",
   "version": "1.0.0",
   "description": "frontend.io project",
-  "main": "src/index.js",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "parcel --open chrome",
-    "build": "parcel build"
+    "build": "parcel build src/index.html"
   },
   "author": "Paul Liani",
   "license": "ISC",
