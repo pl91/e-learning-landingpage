@@ -125,6 +125,7 @@ a {
   letter-spacing: .5px;
   color: var(--color-white);
   cursor: pointer;
+  white-space: nowrap;
   border: none;
   border-radius: 2.8rem;
   padding: 1.4rem 3.2rem;
@@ -197,13 +198,9 @@ html {
   }
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .container {
   grid-template-rows: 90vh repeat(2, min-content);
-  grid-template-columns: [full-start] .9fr[middle-start] repeat(6, 1fr)[middle-end] .95fr[full-end];
+  grid-template-columns: [full-start] .95fr[middle-start] repeat(6, 1fr)[middle-end] .95fr[full-end];
   display: grid;
 }
 
@@ -259,12 +256,12 @@ body {
   align-items: center;
   padding: 2.4rem 0;
   display: grid;
+  overflow-x: clip;
 }
 
 @media only screen and (max-width: 47.8125em) {
   .header {
     grid-row: 2 / 3;
-    grid-template-columns: 100vw;
     row-gap: 5rem;
   }
 }
@@ -277,7 +274,14 @@ body {
   .header__logo {
     grid-area: 1 / 1 / 2 / 2;
   }
+}
 
+.header__btn {
+  justify-self: end;
+  margin-right: 5%;
+}
+
+@media only screen and (max-width: 47.8125em) {
   .header__btn {
     grid-area: 1 / 1 / 2 / 2;
     place-self: start end;
@@ -311,37 +315,19 @@ body {
 }
 
 .header__image-box {
-  width: 99rem;
-  height: 93.6rem;
-  position: absolute;
-  top: -16rem;
-  right: -30rem;
-}
-
-@media only screen and (max-width: 87.5em) {
-  .header__image-box {
-    top: -5rem;
-    right: -50rem;
-  }
-}
-
-@media only screen and (max-width: 56.25em) {
-  .header__image-box {
-    top: -10rem;
-    right: -54.5rem;
-  }
+  height: min-content;
+  width: min-content;
+  background-color: pink;
+  grid-column: 2 / 3;
+  position: relative;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 47.8125em) {
   .header__image-box {
-    height: min-content;
-    width: min-content;
     grid-row: 3 / 4;
     justify-self: center;
     margin-top: -1rem;
-    position: relative;
-    top: 0;
-    left: 0;
   }
 }
 
@@ -354,6 +340,8 @@ body {
 .header__image {
   height: 40rem;
   width: 49rem;
+  height: 100%;
+  width: 100%;
 }
 
 .courses {
@@ -463,8 +451,8 @@ body {
 .footer {
   background-color: var(--color-blue-2);
   grid-area: 3 / full-start / 4 / full-end;
+  grid-template-columns: subgrid;
   grid-template-rows: 12rem;
-  grid-template-columns: [full-start] 1fr[middle-start] minmax(max-content, 1fr) repeat(4, 1fr) minmax(max-content, 1fr)[middle-end] 1fr[full-end];
   place-items: center start;
   display: grid;
 }
@@ -495,7 +483,6 @@ body {
 
 .footer__btn {
   grid-column: 7 / 8;
-  justify-self: end;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */
