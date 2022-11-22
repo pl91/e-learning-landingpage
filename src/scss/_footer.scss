@@ -5,8 +5,8 @@
   background-color: var(--color-blue-2);
 
   display: grid;
-  grid-template-columns: [full-start] 1fr [middle-start] repeat(6, 1fr) [middle-end] 1fr [full-end];
-  grid-template-columns: [full-start] 1fr [middle-start] minmax(max-content, 1fr) repeat(4, 1fr) minmax(max-content, 1fr)  [middle-end] 1fr [full-end];
+  grid-template-columns: subgrid;
+
   grid-template-rows: 12rem;
   align-items: center;
   justify-items: start;
@@ -31,7 +31,6 @@
 
   &__btn {
     grid-column: 7 / 8;
-    justify-self: end;
   }
 
 }

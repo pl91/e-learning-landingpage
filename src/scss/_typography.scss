@@ -79,6 +79,7 @@ a {
       color: var(--color-white); 
       border: none;
       cursor: pointer;
+      white-space: nowrap;
     }
 
     &--1 {
