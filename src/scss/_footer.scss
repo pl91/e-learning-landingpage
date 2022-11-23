@@ -1,26 +1,31 @@
 .footer {
-  grid-row: 3 / 4;
+  grid-row: 4 / 5;
   grid-column: full-start / full-end;
 
-  background-color: var(--color-blue-2);
-
   display: grid;
-  grid-template-columns: subgrid;
-
+  grid-template-columns: [full-start] .95fr [middle-start] repeat(6, 1fr) [middle-end] .95fr [full-end];
   grid-template-rows: 12rem;
   align-items: center;
   justify-items: start;
+  background-color: var(--color-blue-2);
 
-  @media only screen and (max-width: $bp-xs) {
-    margin-top: -2rem;
+  @media only screen and (max-width: $bp-xxl) {
+    grid-template-columns: [full-start] .8fr [middle-start] repeat(6, 1fr) [middle-end] .8fr [full-end];
 }
 
-  @media only screen and (max-width: $bp-xxs) {
-    grid-row: 4 / 5;
+@media only screen and (max-width: $bp-xl) {
+    grid-template-columns: [full-start] .7fr [middle-start] repeat(6, 1fr) [middle-end] .7fr [full-end];
 }
 
-@media only screen and (max-width: $bp-xxxs) {
-  margin-top: -4rem;
+@media only screen and (max-width: $bp-l) {   grid-template-columns: [full-start] .6fr [middle-start] repeat(6, 1fr) [middle-end] .6fr [full-end];
+}
+
+@media only screen and (max-width: $bp-m) {   
+    grid-template-columns: [full-start] .3fr [middle-start] repeat(6, 1fr) [middle-end] .3fr [full-end];
+}
+
+@media only screen and (max-width: $bp-xxs) {
+    grid-template-columns: [full-start] .15fr [middle-start] repeat(6, 1fr) [middle-end] .15fr [full-end];
 }
   
   &__logo {
@@ -31,6 +36,7 @@
 
   &__btn {
     grid-column: 7 / 8;
+    justify-self: end;
   }
 
 }

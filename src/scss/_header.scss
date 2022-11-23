@@ -1,118 +1,99 @@
 .header {
-  grid-row: 1 / 2;
-  grid-column: middle-start / middle-end;
+  grid-row: 2 / 3;
+  grid-column: middle-start / full-end;
 
-  padding: 2.4rem 0;
   display: grid;
   justify-content: space-between;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: min-content;
   grid-template-columns: max-content max-content;
   align-items: center;
   overflow-x: clip;
+ 
 
-  @media only screen and (max-width: $bp-xxs) {
-    // grid-template-columns: 100vw;
-    grid-row: 2 / 3;
-    row-gap: 5rem;
+  @media only screen and (max-width: $bp-xxxs) {
+  grid-template-rows: max-content max-content;
+  grid-template-columns: min-content;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 5rem;
   }
 
-  &__logo {
-    cursor: pointer;
-
-    @media only screen and (max-width: $bp-xxs) {
-      grid-row: 1 / 2;
-      grid-column: 1 / 2;
-    }
-  }
-
-  &__btn {
-
-    justify-self: end;
-    margin-right: 5%;
-
-    @media only screen and (max-width: $bp-xxs) {
-      justify-self: end;
-      align-self: start;
-
-      grid-row: 1 / 2;
-      grid-column: 1 / 2;
-      margin-right: 4rem;
-    }
-  }
 
   &__heading {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+
     max-width: 45.7rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
-  
+    margin-top: -20rem;
 
-    @media only screen and (max-width: $bp-xxs) {
-      justify-self: center;
-      max-width: 52rem;
-      grid-row: 2 / 3;
+    @media only screen and (max-width: $bp-xs) {
+      max-width: 40rem;
+    }
+  
+    @media only screen and (max-width: $bp-xxxs) {
+      grid-row: 1 / 2;
       grid-column: 1 / 2;
-      margin-right: -3%;
+
+      margin-top: 0;
+      max-width: 40rem;
     }
 
-    @media only screen and (max-width: $bp-xxxs) {
-      padding-left: 2.5rem;
-      padding-right: 5rem;
-      margin-right: -5%;
+    @media only screen and (max-width: $bp-xxxxs) {
+      // max-width: 30rem;
     }
 
   }
 
   &__image-box {
-    // width: 99rem;
-    // height: 93.6rem;
-     // height: 50rem;
-    // width: 70rem;
-    // overflow: hidden;  
-    // position: absolute;
-    // top: -16rem;
-    // right: -30rem;
     height: min-content;
     width: min-content;
     position: relative;
-    background-color: pink;
     grid-column: 2 / 3;
-    overflow: hidden;
-    
+    bottom: 24rem;
+    left: 28rem;
 
-    @media only screen and (max-width: $bp-xl) {
-      // right: -50rem;
-      // top: -5rem;
+    @media only screen and (max-width: $bp-xxl) {
+      left: 14rem;    
+    }
+
+    @media only screen and (max-width: $bp-l) {
+      left: 6rem;    
+    }
+
+    @media only screen and (max-width: $bp-m) {
+      bottom: 18rem;
+      left: 16rem;    
+    }
+
+    @media only screen and (max-width: $bp-s) {
+      left: 8rem;    
     }
 
     @media only screen and (max-width: $bp-xs) {
-      // right: -54.5rem;
-      // top: -8rem;
+      left: -4rem;
     }
 
     @media only screen and (max-width: $bp-xxs) {
-
-      // position: relative;
-      // left:0;
-      // top: 0;
-      // height: min-content;
-      // width: min-content;
-      justify-self: center;
-      margin-top: -1rem;
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
+      left: -10rem;
     }
+    
+    @media only screen and (max-width: $bp-xxxs) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
 
-    @media only screen and (max-height: $vh-s) {
-      display: none;
-      }
+      bottom: 0;
+      left: 0;
+    }
   }
 
   &__image {
-    height: 40rem;
-    width: 49rem;
     height: 100%;
     width: 100%;
   }
 }
+
+

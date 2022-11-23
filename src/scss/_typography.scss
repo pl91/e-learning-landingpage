@@ -25,10 +25,6 @@ a {
     font-size: 4.5rem;
     line-height: 5rem;
 }
-
-@media only screen and (max-width: $bp-xxxxs) {
-  font-size: 4rem;
-}
 }
 
 .heading-l {
@@ -52,6 +48,11 @@ a {
 .body-m {
   font-size: 1.8rem;
   color: var(--color-grey);
+
+  @media only screen and (max-width: $bp-xs) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
 }
 
 .body-sm {
